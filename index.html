@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Grip Strength</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="data.js" ></script>
@@ -24,13 +25,13 @@
                             <form action="#" onsubmit="return get_val()">
                                 <p>
                                     <label>
-                                        <input name="gender" type="radio" value="male"id="male"/>
+                                        <input name="gender" class="check_colour" type="radio" value="male"id="male"/>
                                         <span>Male</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input name="gender" type="radio" value="female"id="female" />
+                                        <input name="gender"class="check_colour" type="radio" value="female"id="female" />
                                         <span>Female</span>
                                     </label>
                                 </p>
@@ -62,7 +63,8 @@
                     </div>
                 </li>
                 <li>
-                    <div class="collapsible-header">Details</div>
+                    <div class="collapsible-header">Details <i class="material-icons">keyboard_arrow_down</i>
+            </div>
                     <div class="collapsible-body">
                         <ul>
                             <li>
@@ -89,12 +91,15 @@
                     Grip strength is associated with morbidity and mortality in older people. It is
                     easy to measure and replicate. The normative values for grip strength vary by
                     sex and age.
-                    <br/>
+                    <br/><br/>
                     By using the <a href="https://www.nature.com/articles/1602667">LMS method</a> with known normative
                     values from a meta-analysis of 12 british grip strength studies,
                     this tool calculates the z-score for an individual's grip strength. This enables
                     interpretation of measurements as being at, above, or below expected values.
-                    <br/>
+                    <br/><br/>
+                    <strong>In the interests of data protection, all processing is performed client side- no
+                    information is transmitted, stored or tracked while you are using this.</strong>
+                    <br/><br/>
                     Data Source: Grip Strength across the Life Course: Normative Data from Twelve British Studies
                     Dodds RM et al. (2014) PLOS ONE 9(12): e113637.
                     <a href="https://doi.org/10.1371/journal.pone.0113637">https://doi.org/10.1371/journal.pone.0113637</a>

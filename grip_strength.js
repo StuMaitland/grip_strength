@@ -6,7 +6,6 @@ function get_val() {
         gender="female"
     } else{
         Materialize.toast('Please select Gender', 4000, 'red')
-
     }
     var age = document.getElementById("age").value;
 
