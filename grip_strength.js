@@ -32,3 +32,5 @@ function get_z_score_lms(grip, median, lambda, skew){
     var z_score = (intermediate)/(lambda*skew)
     return z_score
 }
+
+

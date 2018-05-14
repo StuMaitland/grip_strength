@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grip Strength</title>
+    <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="us_data.js" ></script>
+    <script src="us_grip_strength.js" ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col s12 l8 offset-l2">
+            <h5>Grip strength Z score calculator</h5>
+            <div class="card">
+
+                <div class="card-content">
+                    <div class="row">
+                        <div class="col s12">
+                            <form action="#" onsubmit="return get_us_val()">
+                                <p>
+                                    <label>
+                                        <input name="gender" class="check_colour" type="radio" value="male"id="male"/>
+                                        <span>Male</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input name="gender"class="check_colour" type="radio" value="female"id="female" />
+                                        <span>Female</span>
+                                    </label>
+                                </p>
+                                <div class="input-field col s6">
+                                    <select id="age" >
+                                        <option value="22">20-24</option>
+                                        <option value="27">25-29</option>
+                                        <option value="32">30-24</option>
+                                        <option value="37">35-39</option>
+                                        <option value="42">40-44</option>
+                                        <option value="47">45-49</option>
+                                        <option value="52">50-54</option>
+                                        <option value="57">55-59</option>
+                                        <option value="62">60-64</option>
+                                        <option value="67">65-69</option>
+                                        <option value="72">70-74</option>
+                                        <option value="75">75+</option>
+                                    </select>
+                                    <label>Age</label>
+                                </div>
+                                <div class="input-field col s6 blue-text">
+                                    <input id="grip" type="number" step="any" class="validate" min="0" max="100">
+                                    <label for="grip">Grip (kg)</label>
+                                </div>
+                                <input class="btn blue right s12" type="submit" value="Submit" name="Submit">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="result_row" style="display:none">
+        <div class="col s12 l8 offset-l2">
+            <h5>Results</h5>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header active">
+                        Z score:
+                        <span id="z_score_out"class="badge"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 l8 offset-l2">
+            <h5>What is this?</h5>
+            <div class="card">
+
+                <div class="card-content">
+                    Grip strength is associated with morbidity and mortality in older people. It is
+                    easy to measure and replicate. The normative values for grip strength vary by
+                    sex and age.
+                    <br/><br/>
+                    Less normative data is available for the US population than in  Europe. This tool uses normative mean and standard deviation
+                    for age groups of five years separation. This allows an estimate of z-score
+                    We would encourage you to instead use the <a href="index.html">British version of this tool</a> which is more fine-grained to 0.5 year age groups,
+                    and has a better representation of the dataset, using the LMS method to capture the shape of the normative
+                    data instead of assuming normal distribution as this tool does.
+                    <br/><br/>
+                    <strong>In the interests of data protection, all processing is performed client side- no
+                        information is transmitted, stored or tracked while you are using this.</strong>
+                    <br/><br/>
+                    Data Source: Reference values for adult grip strength measured with a Jamar dynamometer: a descriptive meta-analysis
+                    Bohannon et al. Physiotherapy Volume 92, Issue 1, March 2006, Pages 11-15
+                    <a href="https://doi.org/10.1016/j.physio.2005.05.003">https://doi.org/10.1016/j.physio.2005.05.003</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer blue">
+    <div class="container">
+        Source: <a class="white-text" href="https://github.com/stuartbman/grip_strength">GitHub</a>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+
+            <a class="grey-text text-lighten-4 right" href="https://twitter.com/stuartbman">Stu Maitland</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
